@@ -41,7 +41,7 @@ Additional features that I implemented include:
 1. Install Python 3.7 or higher.
 2. Install the Python dependencies using the following command:
 
-    pip install -r requirements.txt
+    python -m pip install -r requirements.txt
 
 3. Run the application using the following command:
 

@@ -63,5 +63,4 @@ def sign_up():
             login_user(new_user, remember=True)
 
             return redirect(url_for('views.messageboard'))
-            # add user to database
     return render_template('sign_up.html', user=current_user)

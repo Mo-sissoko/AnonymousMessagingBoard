@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %} Message {% endblock %}
+{% block content %}
+    <h1 align="center">Message Board </h1>
+    <form method="POST">
+        <input name="message" id="message" class="form-control form-control-lg" type="text" placeholder="Hi There!"
+               aria-label=".form-control-lg example">
+        <br/>
+        <div align="center">
+            <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+    </form>
+    <ul class="list-group" id="messages">
+        {% for message in messages %}
+            <br/>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <p class="mb-1">{{ message.message }}</p>
+                <small>{{ message.date }}</small>
+            </a>
+        {% endfor %}
+    </ul>
+{% endblock %}
